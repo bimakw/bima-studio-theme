@@ -61,14 +61,15 @@ get_header();
     <div class="container">
         <div class="portfolio-grid" id="portfolio-grid">
             <?php
-                // Default portfolio items from CV
+                // Portfolio items from CV
                 $demo_items = array(
+                    // Personal Projects
                     array(
                         'title'       => __( 'Percival (PMO)', 'bima-studio' ),
                         'category'    => __( 'Full Stack', 'bima-studio' ),
                         'filter'      => 'fullstack',
-                        'description' => __( 'Full-stack PMO application for project tracking and reporting.', 'bima-studio' ),
-                        'tech'        => 'Next.js, TypeScript, Rust, PostgreSQL, Docker',
+                        'description' => __( 'Full-stack PMO application for project tracking. Features project/task management, team & resource allocation, dashboard analytics.', 'bima-studio' ),
+                        'tech'        => 'Next.js, TypeScript, Rust (Axum), PostgreSQL, Docker',
                         'github'      => 'https://github.com/bimakw/percival',
                         'color'       => 'linear-gradient(135deg, #6366f1, #8b5cf6)',
                     ),
@@ -76,8 +77,8 @@ get_header();
                         'title'       => __( 'GCP DevOps Infrastructure', 'bima-studio' ),
                         'category'    => __( 'DevOps / IaC', 'bima-studio' ),
                         'filter'      => 'devops',
-                        'description' => __( 'Production-ready GCP infrastructure using Terraform.', 'bima-studio' ),
-                        'tech'        => 'Terraform, GKE, ArgoCD, Prometheus',
+                        'description' => __( 'Production-ready GCP infrastructure with Terraform. GKE cluster, Cloud SQL, ArgoCD GitOps, Prometheus + Grafana monitoring.', 'bima-studio' ),
+                        'tech'        => 'Terraform, GKE, Cloud SQL, ArgoCD, Prometheus, Grafana',
                         'github'      => 'https://github.com/bimakw/gcp-devops-iac',
                         'color'       => 'linear-gradient(135deg, #4285f4, #34a853)',
                     ),
@@ -85,8 +86,8 @@ get_header();
                         'title'       => __( 'Auth Service', 'bima-studio' ),
                         'category'    => __( 'Backend / Rust', 'bima-studio' ),
                         'filter'      => 'backend',
-                        'description' => __( 'Authentication microservice with JWT and OAuth2.', 'bima-studio' ),
-                        'tech'        => 'Rust, Actix-web, PostgreSQL, Redis',
+                        'description' => __( 'Authentication microservice with JWT, Google OAuth2, Two-Factor Authentication (TOTP) with backup codes, and RBAC.', 'bima-studio' ),
+                        'tech'        => 'Rust, Actix-web, PostgreSQL, Redis, JWT, OAuth2',
                         'github'      => 'https://github.com/bimakw/auth-service',
                         'color'       => 'linear-gradient(135deg, #f74c00, #b7410e)',
                     ),
@@ -94,8 +95,8 @@ get_header();
                         'title'       => __( 'URL Shortener', 'bima-studio' ),
                         'category'    => __( 'Backend / Go', 'bima-studio' ),
                         'filter'      => 'backend',
-                        'description' => __( 'High-performance URL shortening service.', 'bima-studio' ),
-                        'tech'        => 'Go, PostgreSQL, Redis, Docker',
+                        'description' => __( 'High-performance URL shortening service with analytics and QR code generation. Throughput: 10,000+ req/s.', 'bima-studio' ),
+                        'tech'        => 'Go, PostgreSQL, Redis, Clean Architecture, Docker',
                         'github'      => 'https://github.com/bimakw/url-shortener',
                         'color'       => 'linear-gradient(135deg, #00add8, #5dc9e2)',
                     ),
@@ -103,17 +104,18 @@ get_header();
                         'title'       => __( 'API Gateway', 'bima-studio' ),
                         'category'    => __( 'Backend / Go', 'bima-studio' ),
                         'filter'      => 'backend',
-                        'description' => __( 'Lightweight API Gateway with rate limiting.', 'bima-studio' ),
+                        'description' => __( 'Lightweight API Gateway with rate limiting (token bucket), API key management, and reverse proxy.', 'bima-studio' ),
                         'tech'        => 'Go, Redis, Docker',
                         'github'      => 'https://github.com/bimakw/api-gateway',
                         'color'       => 'linear-gradient(135deg, #00add8, #00758f)',
                     ),
+                    // Project Highlights (Work)
                     array(
                         'title'       => __( 'HR Attendance System', 'bima-studio' ),
                         'category'    => __( 'Full Stack', 'bima-studio' ),
                         'filter'      => 'fullstack',
-                        'description' => __( 'Microservices-based attendance platform.', 'bima-studio' ),
-                        'tech'        => 'Golang, Redis, PostgreSQL, GCP',
+                        'description' => __( 'Legacy attendance platform redesigned to microservices. Redis caching improved API response by 60%. Handles 10K+ concurrent users.', 'bima-studio' ),
+                        'tech'        => 'Golang (Fiber), Redis, PostgreSQL, GCP, Docker',
                         'github'      => 'https://github.com/bimakw/service-presensi',
                         'color'       => 'linear-gradient(135deg, #10b981, #059669)',
                     ),

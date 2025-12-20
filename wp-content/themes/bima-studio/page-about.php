@@ -57,11 +57,14 @@ get_header();
                 <div class="skills-list">
                     <?php
                     $skills = array(
+                        // Languages
                         'Golang', 'PHP', 'C#', 'JavaScript', 'SQL', 'Rust',
-                        'Fiber', '.NET Core', 'Laravel', 'Actix-web',
-                        'Docker', 'Kubernetes', 'Terraform',
-                        'GCP', 'Firebase', 'Redis', 'Nginx',
-                        'CI/CD', 'Microservices', 'DDD', 'Clean Architecture',
+                        // Frameworks/Tools
+                        'Fiber', '.NET Core', 'Laravel', 'Docker', 'Jenkins', 'GitHub Actions', 'Actix-web',
+                        // Cloud & Infra
+                        'GCP', 'Firebase', 'Redis', 'Terraform', 'Nginx', 'IIS', 'VPN', 'Kubernetes',
+                        // Practices
+                        'CI/CD', 'Microservices', 'DDD', 'Hexagonal Architecture', 'Clean Architecture',
                     );
 
                     foreach ( $skills as $skill ) :
@@ -91,19 +94,19 @@ get_header();
                     'year'        => 'Sep 2021 - Present',
                     'title'       => __( 'Technical Lead', 'bima-studio' ),
                     'company'     => __( 'PT. Indomarco Prismatama (Indomaret Group) - Jakarta', 'bima-studio' ),
-                    'description' => __( 'Led a 20-member technical division across 4 specialized units. Architected Golang (Fiber) backend services supporting 100K+ internal users. Built custom API Gateway with Laravel and spearheaded CI/CD automation using GitHub Actions and Jenkins.', 'bima-studio' ),
+                    'description' => __( 'Led a 20-member technical division across 4 specialized units: Business Process Recruitment, Time Management, IRK (Flutter mobile app), and Course Development. Architected Golang (Fiber) backend services supporting 100K+ internal users. Built custom API Gateway with Laravel. Spearheaded CI/CD automation using GitHub Actions and Jenkins, cutting deployment time by 40%. Standardized DDD and Hexagonal Architecture.', 'bima-studio' ),
                 ),
                 array(
                     'year'        => 'Jul 2020 - Aug 2021',
                     'title'       => __( 'Technical Architect', 'bima-studio' ),
                     'company'     => __( 'PT. Indomarco Prismatama - Yogyakarta', 'bima-studio' ),
-                    'description' => __( 'Led monolith-to-microservices migration using Docker and GCP. Designed high-availability systems and scalable API Gateway infrastructure. Implemented Terraform-based IaC to standardize cloud provisioning.', 'bima-studio' ),
+                    'description' => __( 'Led monolith-to-microservices migration using Docker and GCP. Designed high-availability systems and scalable API Gateway infrastructure. Implemented Terraform-based IaC to standardize cloud provisioning. Deployed internal apps via IIS and Nginx with hybrid cloud/on-premise setups.', 'bima-studio' ),
                 ),
                 array(
                     'year'        => 'Sep 2019 - Jun 2020',
                     'title'       => __( 'Full Stack Developer', 'bima-studio' ),
                     'company'     => __( 'PT. Indomarco Prismatama - Yogyakarta', 'bima-studio' ),
-                    'description' => __( 'Built and maintained HR systems using .NET MVC, Laravel, and WCF. Managed SQL Server and PostgreSQL databases for various modules.', 'bima-studio' ),
+                    'description' => __( 'Built and maintained HR systems using .NET MVC, Laravel, and WCF. Managed SQL Server and PostgreSQL databases for various modules. Maintained version control using TortoiseSVN and GitHub.', 'bima-studio' ),
                 ),
             );
 
