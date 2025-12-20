@@ -527,8 +527,39 @@ p {
     color: var(--color-white);
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
 .portfolio-item {
     position: relative;
+    display: block;
     border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 4/3;
