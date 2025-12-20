@@ -61,33 +61,6 @@ get_header();
     <div class="container">
         <div class="portfolio-grid grid grid--3" id="portfolio-grid">
             <?php
-            $portfolio = bima_studio_get_portfolio();
-
-            if ( $portfolio->have_posts() ) :
-                while ( $portfolio->have_posts() ) :
-                    $portfolio->the_post();
-
-                    $terms      = get_the_terms( get_the_ID(), 'portfolio_category' );
-                    $term_slugs = $terms ? wp_list_pluck( $terms, 'slug' ) : array();
-                    $category   = get_post_meta( get_the_ID(), '_bima_portfolio_category', true );
-                    ?>
-                    <article class="portfolio-card" data-category="<?php echo esc_attr( implode( ' ', $term_slugs ) ); ?>">
-                        <a href="<?php the_permalink(); ?>" class="portfolio-item">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <?php the_post_thumbnail( 'bima-portfolio-thumb' ); ?>
-                            <?php else : ?>
-                                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));"></div>
-                            <?php endif; ?>
-                            <div class="portfolio-overlay">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php echo esc_html( $category ); ?></p>
-                            </div>
-                        </a>
-                    </article>
-                    <?php
-                endwhile;
-                wp_reset_postdata();
-            else :
                 // Default portfolio items from CV
                 $demo_items = array(
                     array(
@@ -162,7 +135,6 @@ get_header();
                     </article>
                     <?php
                 endforeach;
-            endif;
             ?>
         </div>
     </div>
