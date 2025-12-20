@@ -57,11 +57,11 @@ get_header();
                 <div class="skills-list">
                     <?php
                     $skills = array(
-                        'Go', 'PHP', 'JavaScript', 'TypeScript',
-                        'PostgreSQL', 'MongoDB', 'Redis',
+                        'Golang', 'PHP', 'C#', 'JavaScript', 'SQL', 'Rust',
+                        'Fiber', '.NET Core', 'Laravel', 'Actix-web',
                         'Docker', 'Kubernetes', 'Terraform',
-                        'GCP', 'AWS', 'CI/CD',
-                        'REST API', 'gRPC', 'Microservices',
+                        'GCP', 'Firebase', 'Redis', 'Nginx',
+                        'CI/CD', 'Microservices', 'DDD', 'Clean Architecture',
                     );
 
                     foreach ( $skills as $skill ) :
@@ -88,22 +88,22 @@ get_header();
             <?php
             $experiences = array(
                 array(
-                    'year'        => '2024 - Present',
-                    'title'       => __( 'Senior Software Engineer', 'bima-studio' ),
-                    'company'     => __( 'Freelance / Bima Studio', 'bima-studio' ),
-                    'description' => __( 'Building custom software solutions for clients. Specializing in backend systems, API development, and cloud infrastructure.', 'bima-studio' ),
+                    'year'        => 'Sep 2021 - Present',
+                    'title'       => __( 'Technical Lead', 'bima-studio' ),
+                    'company'     => __( 'PT. Indomarco Prismatama (Indomaret Group) - Jakarta', 'bima-studio' ),
+                    'description' => __( 'Led a 20-member technical division across 4 specialized units. Architected Golang (Fiber) backend services supporting 100K+ internal users. Built custom API Gateway with Laravel and spearheaded CI/CD automation using GitHub Actions and Jenkins.', 'bima-studio' ),
                 ),
                 array(
-                    'year'        => '2022 - 2024',
-                    'title'       => __( 'Backend Developer', 'bima-studio' ),
-                    'company'     => __( 'Tech Company', 'bima-studio' ),
-                    'description' => __( 'Developed and maintained backend services using Go and Node.js. Implemented CI/CD pipelines and cloud infrastructure.', 'bima-studio' ),
+                    'year'        => 'Jul 2020 - Aug 2021',
+                    'title'       => __( 'Technical Architect', 'bima-studio' ),
+                    'company'     => __( 'PT. Indomarco Prismatama - Yogyakarta', 'bima-studio' ),
+                    'description' => __( 'Led monolith-to-microservices migration using Docker and GCP. Designed high-availability systems and scalable API Gateway infrastructure. Implemented Terraform-based IaC to standardize cloud provisioning.', 'bima-studio' ),
                 ),
                 array(
-                    'year'        => '2020 - 2022',
+                    'year'        => 'Sep 2019 - Jun 2020',
                     'title'       => __( 'Full Stack Developer', 'bima-studio' ),
-                    'company'     => __( 'Startup', 'bima-studio' ),
-                    'description' => __( 'Built web applications from scratch. Worked on frontend with React and backend with PHP/Laravel.', 'bima-studio' ),
+                    'company'     => __( 'PT. Indomarco Prismatama - Yogyakarta', 'bima-studio' ),
+                    'description' => __( 'Built and maintained HR systems using .NET MVC, Laravel, and WCF. Managed SQL Server and PostgreSQL databases for various modules.', 'bima-studio' ),
                 ),
             );
 

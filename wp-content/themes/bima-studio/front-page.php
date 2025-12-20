@@ -39,16 +39,16 @@ get_header();
 
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label"><?php esc_html_e( 'Projects Completed', 'bima-studio' ); ?></span>
+                    <span class="stat-number">100K+</span>
+                    <span class="stat-label"><?php esc_html_e( 'Users Supported', 'bima-studio' ); ?></span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">5+</span>
+                    <span class="stat-number">6+</span>
                     <span class="stat-label"><?php esc_html_e( 'Years Experience', 'bima-studio' ); ?></span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label"><?php esc_html_e( 'Client Satisfaction', 'bima-studio' ); ?></span>
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label"><?php esc_html_e( 'Team Members Led', 'bima-studio' ); ?></span>
                 </div>
             </div>
         </div>
