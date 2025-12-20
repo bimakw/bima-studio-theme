@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'bima-studio' ); ?></a></li>
                         <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>"><?php esc_html_e( 'About', 'bima-studio' ); ?></a></li>
                         <li><a href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Services', 'bima-studio' ); ?></a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>"><?php esc_html_e( 'Portfolio', 'bima-studio' ); ?></a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/works' ) ); ?>"><?php esc_html_e( 'Portfolio', 'bima-studio' ); ?></a></li>
                         <li><a href="<?php echo esc_url( home_url( '/blog' ) ); ?>"><?php esc_html_e( 'Blog', 'bima-studio' ); ?></a></li>
                     </ul>
                     <?php
@@ -91,7 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'bima-studio' ); ?></a></li>
                 <li><a href="<?php echo esc_url( home_url( '/about' ) ); ?>"><?php esc_html_e( 'About', 'bima-studio' ); ?></a></li>
                 <li><a href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Services', 'bima-studio' ); ?></a></li>
-                <li><a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>"><?php esc_html_e( 'Portfolio', 'bima-studio' ); ?></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/works' ) ); ?>"><?php esc_html_e( 'Portfolio', 'bima-studio' ); ?></a></li>
                 <li><a href="<?php echo esc_url( home_url( '/blog' ) ); ?>"><?php esc_html_e( 'Blog', 'bima-studio' ); ?></a></li>
                 <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Contact', 'bima-studio' ); ?></a></li>
             </ul>

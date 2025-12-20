@@ -29,7 +29,7 @@ get_header();
             </p>
 
             <div class="hero-actions">
-                <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn--primary btn--large">
+                <a href="<?php echo esc_url( home_url( '/works' ) ); ?>" class="btn btn--primary btn--large">
                     <?php esc_html_e( 'View Our Work', 'bima-studio' ); ?>
                 </a>
                 <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn--secondary btn--large">
@@ -206,7 +206,7 @@ get_header();
         </div>
 
         <div class="text-center" style="margin-top: var(--spacing-2xl);">
-            <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn--secondary">
+            <a href="<?php echo esc_url( home_url( '/works' ) ); ?>" class="btn btn--secondary">
                 <?php esc_html_e( 'View All Projects', 'bima-studio' ); ?>
             </a>
         </div>
