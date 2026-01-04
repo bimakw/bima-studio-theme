@@ -46,8 +46,12 @@ jobs:
 
       - name: Validate PHP Syntax
         run: |
-          find wp-content/themes/bima-studio -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"
-          exit 0
+          errors=$(find wp-content/themes/bima-studio -name "*.php" -exec php -l {} \; 2>&1 | grep -v "No syntax errors" || true)
+          if [ -n "$errors" ]; then
+            echo "$errors"
+            exit 1
+          fi
+          echo "All PHP files have valid syntax"
 
       - name: Check Required Files
         run: |
