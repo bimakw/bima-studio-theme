@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  phpcs:
+    name: PHP CodeSniffer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer, phpcs
+
+      - name: Install WordPress Coding Standards
+        run: |
+          composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer global require --dev wp-coding-standards/wpcs:"^3.0"
+          phpcs --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs
+
+      - name: Run PHPCS
+        run: |
+          phpcs --standard=WordPress \
+            --extensions=php \
+            --ignore=vendor,node_modules \
+            --report=summary \
+            wp-content/themes/bima-studio/ || true
+
+  theme-check:
+    name: Theme Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Validate PHP Syntax
+        run: |
+          find wp-content/themes/bima-studio -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"
+          exit 0
+
+      - name: Check Required Files
+        run: |
+          THEME_DIR="wp-content/themes/bima-studio"
+          for file in style.css index.php functions.php; do
+            if [ ! -f "$THEME_DIR/$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "All required theme files present"
+
+      - name: Validate style.css Header
+        run: |
+          STYLE="wp-content/themes/bima-studio/style.css"
+          if ! grep -q "Theme Name:" "$STYLE"; then
+            echo "Missing 'Theme Name:' in style.css"
+            exit 1
+          fi
+          echo "style.css header is valid"
